@@ -26,6 +26,7 @@ public class GoL extends PApplet {
 	public void draw() {
 		
 		
+		
 	}
 	
 
