@@ -27,6 +27,7 @@ public class GoL extends PApplet {
 		
 		
 		
+		
 	}
 	
 
