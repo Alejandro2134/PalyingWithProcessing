@@ -37,6 +37,7 @@ public class GoL extends PApplet {
 			for (int i = 0; i < height; i++ )
 				for (int j = 0; j <  width; j++ )
 				{
+					
 					counter = board [(i - 1 + height) % height][(j - 1 + width) % width] +  
 							  board [(i - 1 + height) % height] [j] + 
 							  board [(i - 1 + height) % height][(j + 1) % width] + 
