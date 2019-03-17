@@ -27,14 +27,15 @@ public class GoL extends PApplet {
 			
 		}
 		
-		public void nextIteration ()
-		{
+		public void nextIteration () {
+			
+			
 			
 		}
-		
+			
 	}
 	
-	public int width = 100, heigth = 50, square_size = 8; 
+	public int width = 100, heigth = 100, square_size = 8; 
 	Logic GoL = new Logic(width, heigth);
 	
 	public void settings() {
@@ -61,7 +62,7 @@ public class GoL extends PApplet {
 			
 			try {
 				
-				Thread.sleep(20);
+				Thread.sleep(5);
 				GoL.nextIteration();
 				
 			} catch (Exception ex) {ex.printStackTrace();}
