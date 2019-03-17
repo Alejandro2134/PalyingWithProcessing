@@ -29,10 +29,29 @@ public class GoL extends PApplet {
 		
 		public void nextIteration () {
 			
+			int counter = 0;
 			
+			height = 80;
+			width = 80;
 			
-		}
-			
+			for (int i = 0; i < height; i++ )
+				for (int j = 0; j <  width; j++ )
+				{
+					counter = board [(i - 1 + height) % height][(j - 1 + width) % width] +  
+							  board [(i - 1 + height) % height] [j] + 
+							  board [(i - 1 + height) % height][(j + 1) % width] + 
+							  board [i][(j - 1 + width) % width] + 
+							  board [i][(j + 1) % width] + 
+							  board [(i + 1) % height][(j - 1 + width) % width] + 
+							  board [(i + 1) % height][j] + 
+							  board [(i + 1) % height][(j + 1) % width]; 
+					
+					if(board[i][j] == 1)
+						board[i][j] = (counter < 2 || counter > 3) ? 0 : 1;
+					else
+						board[i][j] = (counter == 3) ? 1 : 0;						
+				}	
+			}
 	}
 	
 	public int width = 80, heigth = 80, square_size = 8; 
@@ -53,7 +72,7 @@ public class GoL extends PApplet {
 			for(int j = 0; j < width; j++)
 			{
 				if(GoL.board[i][j] == 1)
-					fill(0,0,255);
+					fill(0, 0, 255);
 				else
 					fill(0);
 				
@@ -62,7 +81,7 @@ public class GoL extends PApplet {
 			
 			try {
 				
-				Thread.sleep(5);
+				Thread.sleep(1);
 				GoL.nextIteration();
 				
 			} catch (Exception ex) {ex.printStackTrace();}
@@ -75,7 +94,7 @@ public class GoL extends PApplet {
 		
 		String[] appletArgs = new String[] {"gameOfLife.GoL"};
 		PApplet.main(appletArgs);
-	
+		
 	}
 
 }
