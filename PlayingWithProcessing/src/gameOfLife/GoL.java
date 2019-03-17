@@ -1,4 +1,4 @@
-package GameOfLife;
+package gameOfLife;
 
 import java.util.Random;
 
@@ -35,7 +35,7 @@ public class GoL extends PApplet {
 			
 	}
 	
-	public int width = 100, heigth = 100, square_size = 8; 
+	public int width = 80, heigth = 80, square_size = 8; 
 	Logic GoL = new Logic(width, heigth);
 	
 	public void settings() {
@@ -73,7 +73,7 @@ public class GoL extends PApplet {
 	
 	public static void main(String[] args) {
 		
-		String[] appletArgs = new String[] {"GameOfLife.GoL"};
+		String[] appletArgs = new String[] {"gameOfLife.GoL"};
 		PApplet.main(appletArgs);
 	
 	}
