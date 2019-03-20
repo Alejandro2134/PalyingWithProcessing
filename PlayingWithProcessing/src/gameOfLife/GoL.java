@@ -82,7 +82,7 @@ public class GoL extends PApplet {
 			
 			try {
 				
-				Thread.sleep(1);
+				Thread.sleep(10);
 				GoL.nextIteration();
 				
 			} catch (Exception ex) {ex.printStackTrace();}
