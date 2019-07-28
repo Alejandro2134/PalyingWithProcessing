@@ -10,7 +10,8 @@ public class Triqui extends PApplet {
 		
 		public Logic() {
 			this.board = new int [3][3];
-		}		
+		}
+		
 	}
 	
 	Logic Triqui = new Logic();
@@ -45,12 +46,12 @@ public class Triqui extends PApplet {
 		for(int i = 0; i < 3; i++) 
 			for(int j = 0; j < 3; j++) {
 				if(Triqui.board[i][j] == 1) {
-					line(j*(400/3), i*(400/3), (j+1)*(400/3), (i+1)*(400/3));
-					line((j+1)*(400/3), i*(400/3), j*(400/3), (i+1)*(400/3));
+					line(j*(width/3), i*(heigth/3), (j+1)*(width/3), (i+1)*(heigth/3));
+					line((j+1)*(width/3), i*(heigth/3), j*(width/3), (i+1)*(heigth/3));
 				} else
 					if(Triqui.board[i][j] == 0){
-						ellipseMode(CENTER);
-						ellipse(((j+1)*(400/3))/2, ((i+1)*(400/3))/2, width/3, heigth/3);
+						ellipseMode(CORNERS);
+						ellipse(j*(width/3), i*(heigth/3), (j+1)*(width/3), (i+1)*(heigth/3));
 					}
 			}
 	}
