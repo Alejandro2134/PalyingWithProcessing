@@ -29,6 +29,18 @@ public class Triqui extends PApplet {
 			for(int j = 0; j < 3; j++)
 				rect(j*(width/3), i*(heigth/3), width/3, heigth/3);
 		
+		if(mousePressed) {
+			
+			int xPosition = (int) (map(mouseX, 0, width, 0, 3));
+			int yPosition = (int) (map(mouseY, 0, heigth, 0, 3));
+			
+			System.out.println(xPosition);
+			System.out.println(yPosition);
+			
+			Triqui.board[yPosition][xPosition] = 1;
+			
+		}
+		
 		for(int i = 0; i < 3; i++) 
 			for(int j = 0; j < 3; j++) {
 				if(Triqui.board[i][j] == 1) {
